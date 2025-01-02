@@ -7,12 +7,12 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 export const Header = () => {
   return (
     <>
-      <Navbar expand="lg" className="" bg='white' >
+      <Navbar expand="lg" className="bg-body-tertiary" >
         <Container>
         <img src='https://amberarondekar.com/wp-content/uploads/2023/10/logo-75x75-1.png'/>
           <Navbar.Brand href="#home">XYZ</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          
+
 
           {/*<Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

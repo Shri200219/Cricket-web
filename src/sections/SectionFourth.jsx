@@ -7,12 +7,12 @@ const SectionFourth = () => {
     <>
     
 
-    <Container className='px-5'>
+    <Container>
 
-    <Typography variant={'h2'} className={'text-center py-3 fs-1 fw-bold'} >
+    <Typography variant={'h2'} className={'text-center fs-1 fw-bold'} >
     Still Wondering If One on One Free Call is For You?
     </Typography>
-    <Typography variant={'p'} className={'text-center fs-5 p-3'}>
+    <Typography variant={'p'} className={'text-center fs-5'}>
     "The choice is clear: if you want to support your aspiring young cricketer in
     pursuing their dreams, the key lies in building their mental strength. Help
     them overcome the fear of failure, excel under pressure in critical moments,

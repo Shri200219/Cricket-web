@@ -7,7 +7,7 @@ import { SharedButton } from '../components/SharedButton'
 const SectionThird = () => {
   return (
     <>
-      <div className='py-3'>
+      <div>
         <Typography variant={'h2'} className={'fw-bold fs-1 text-center'}>
           This free one on one call is for you if:
         </Typography>
