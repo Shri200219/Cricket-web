@@ -89,7 +89,7 @@ const SectionFive = () => {
             <Accordion defaultActiveKey="0" className='bg-gradient--pale-ocean'>
             <Stack direction='vertical' gap={3} className='bg-gradient--pale-ocean'>
               <Accordion.Item eventKey="0" className='border'>
-                <Accordion.Header className=''>
+                <Accordion.Header className='border-bottom'>
                   <FaClock className="me-3 " color='#6ed8f0' />
                   What will be the duration of the call?
                 </Accordion.Header>
@@ -97,7 +97,7 @@ const SectionFive = () => {
               </Accordion.Item>
 
               <Accordion.Item eventKey="1" className='border'>
-                <Accordion.Header className=''>
+                <Accordion.Header className='border-bottom'>
                   <FaVideo className="me-3" color='#6ed8f0' />
                   Will it be a recorded call?
                 </Accordion.Header>
@@ -105,7 +105,7 @@ const SectionFive = () => {
               </Accordion.Item>
 
               <Accordion.Item eventKey="2" className='border'>
-                <Accordion.Header className=''>
+                <Accordion.Header className='border-bottom'>
                   <FaCalendarCheck className="me-3" color='#6ed8f0' />
                   How will the call be scheduled?
                 </Accordion.Header>
@@ -113,7 +113,7 @@ const SectionFive = () => {
               </Accordion.Item>
 
               <Accordion.Item eventKey="3" className='border'>
-                <Accordion.Header className=''>
+                <Accordion.Header className='border-bottom'>
                   <BiSolidPhoneCall className="me-3" color='#6ed8f0' />
                   Will it be a phone call?
                 </Accordion.Header>
@@ -121,7 +121,7 @@ const SectionFive = () => {
               </Accordion.Item>
 
               <Accordion.Item eventKey="4" className='border'>
-                <Accordion.Header className=''>
+                <Accordion.Header className='border-bottom'>
                   <FaPencilAlt className="me-3" color='#6ed8f0' />
                   Do I need to be prepared with anything?
                 </Accordion.Header>
@@ -129,7 +129,7 @@ const SectionFive = () => {
               </Accordion.Item>
 
               <Accordion.Item eventKey="5" className='border'>
-                <Accordion.Header className=''>
+                <Accordion.Header className='border-bottom'>
                   <FaUsers className="me-3" color='#6ed8f0' />
                   Is there a Social Media Group for This Program?
                 </Accordion.Header>
