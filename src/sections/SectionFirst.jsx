@@ -14,7 +14,7 @@ const SectionFirst = () => {
                     <Row>
                         <Col sm={12} md={6}>
                             <Stack direction="vertical" gap={3} className='justify-content-center align-items-end '>
-                            <Typography variant={'h1'} className={'fw-bold text-center'}> 
+                            <Typography variant={'h1'} className={'fw-bold text-center '}> 
                             6 steps strategy to build 6 figure coaching business with my LOC method
                             </Typography>
                                 <p className='fs-20'>In this coffee call I will share my battle-tested, 6-step  strategy to build a successful coaching business, by selling premium high-ticket courses & without burning money on ad spend.</p>

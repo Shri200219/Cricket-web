@@ -11,7 +11,7 @@ const SectionSecond = () => {
             <Container>
                 <Row>
                     <Col sm={12} md={6}>
-                        <Typography variant="h2" className="fw-bold fs-1 mb-4">
+                        <Typography variant="h2" className="fw-bold mb-4">
                             In this one-on-one call you will be able to understand
                         </Typography>
                         <Stack direction="vertical" gap={4} className="align-items-start">

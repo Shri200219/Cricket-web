@@ -9,7 +9,7 @@ const SectionThird = () => {
     <Container>
         <Row>
             <Col sm={12} md={6}>
-                <Typography variant={'h2'} className={'fw-bold fs-1'}> 
+                <Typography variant={'h2'} className={'fw-bold'}> 
                  This free one on one call is for you if:
                 </Typography>
                 <Stack direction="vertical" gap={0} className='justify-content-start align-items-start '>

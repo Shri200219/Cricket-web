@@ -1,15 +1,16 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
+import Typography from '../components/Typography';
 
 const SectionFive = () => {
   return (
     <>
     <div className='bg-gradient--pale-ocean'>
     <Container>
-    <h1>
+    <Typography variant={'h2'} className={'text-center fs-1 fw-bold'}>
     Frequently Asked Questions
-    </h1>
+    </Typography>
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
         <Accordion.Header>What will be the duration of the call?</Accordion.Header>

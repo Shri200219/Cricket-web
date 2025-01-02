@@ -4116,7 +4116,7 @@ textarea.form-control-lg{
     align-items:center;
     width:100%;
     padding:var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-    font-size:1rem;
+    font-size:20px;
     color:var(--bs-accordion-btn-color);
     text-align:left;
     background-color:var(--bs-accordion-btn-bg);
@@ -4137,7 +4137,8 @@ textarea.form-control-lg{
 }
 .accordion-button:not(.collapsed)::after{
     background-image:var(--bs-accordion-btn-active-icon);
-    transform:var(--bs-accordion-btn-icon-transform)
+    transform:var(--bs-accordion-btn-icon-transform);
+    font-size:20px;
 }
 .accordion-button::after{
     flex-shrink:0;
@@ -7425,7 +7426,7 @@ textarea.form-control-lg{
     font-family:var(--bs-font-monospace)!important
 }
 .fs-1{
-    font-size:calc(4.325rem + 2vw)!important
+    font-size:calc(1.375rem + 1.5vw)!important
 }
 .fs-2{
     font-size:calc(1.325rem + .9vw)!important
