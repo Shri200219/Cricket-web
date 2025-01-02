@@ -10945,4 +10945,13 @@ textarea.form-control-lg{
     font-size: 20px;
 }
 
+.activecard:hover{
+    background-color:#cdf4fd ;
+    color:white;
+}
+
+.activecard svg:hover {
+    fill: white;
+  }
+
 /*# sourceMappingURL=bootstrap.min.css.map */

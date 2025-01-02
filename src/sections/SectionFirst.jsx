@@ -1,5 +1,8 @@
 import React from 'react'
-import {Stack,Row,Col,Container} from 'react-bootstrap'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Stack from 'react-bootstrap/Stack';
+import { Container } from 'react-bootstrap';
 import Typography from '../components/Typography';
 import { SharedButton } from '../components/SharedButton';
 
