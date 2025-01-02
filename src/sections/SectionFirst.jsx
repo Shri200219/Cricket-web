@@ -6,12 +6,14 @@ import { Container } from 'react-bootstrap';
 import Typography from '../components/Typography';
 import { SharedButton } from '../components/SharedButton';
 
+
 const SectionFirst = () => {
-    return (
-        <>
-            <div className='bg-gradient--pale-ocean py-5'>
+  return (
+    <>
+    
+    <div className='bg-gradient--pale-ocean py-5'>
                 <Container>
-                    <Row>
+                    <Row className='g-4'>
                         <Col sm={12} md={6}>
                             <Stack direction="vertical" gap={3} className='justify-content-center align-items-end '>
                                 <Typography variant={'h1'} className={'fs-1 fw-bold text-center'}>
@@ -28,8 +30,9 @@ peak performance on the cricket field.</Typography>
                     </Row>
                 </Container>
             </div>
-        </>
-    )
+    
+    </>
+  )
 }
 
 export default SectionFirst;
