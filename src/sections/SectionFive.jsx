@@ -89,59 +89,59 @@ const SectionFive = () => {
             <Accordion defaultActiveKey="0" className='bg-gradient--pale-ocean'>
             <Stack direction='vertical' gap={3} className='bg-gradient--pale-ocean'>
               <Accordion.Item eventKey="0" className='border'>
-                <Accordion.Header className='border-bottom'>
+                <Accordion.Header >
                   <FaClock className="me-3 " color='#6ed8f0' />
                   What will be the duration of the call?
                 </Accordion.Header>
-                <Accordion.Body>30-45 Mins</Accordion.Body>
+                <Accordion.Body className='border-top'>30-45 Mins</Accordion.Body>
               </Accordion.Item>
 
               <Accordion.Item eventKey="1" className='border'>
-                <Accordion.Header className='border-bottom'>
+                <Accordion.Header >
                   <FaVideo className="me-3" color='#6ed8f0' />
                   Will it be a recorded call?
                 </Accordion.Header>
-                <Accordion.Body>One on One…live call.</Accordion.Body>
+                <Accordion.Body className='border-top'>One on One…live call.</Accordion.Body>
               </Accordion.Item>
 
               <Accordion.Item eventKey="2" className='border'>
-                <Accordion.Header className='border-bottom'>
+                <Accordion.Header>
                   <FaCalendarCheck className="me-3" color='#6ed8f0' />
                   How will the call be scheduled?
                 </Accordion.Header>
-                <Accordion.Body>On a zoom with mutual pre-fixed time.</Accordion.Body>
+                <Accordion.Body className='border-top'>On a zoom with mutual pre-fixed time.</Accordion.Body>
               </Accordion.Item>
 
               <Accordion.Item eventKey="3" className='border'>
-                <Accordion.Header className='border-bottom'>
+                <Accordion.Header>
                   <BiSolidPhoneCall className="me-3" color='#6ed8f0' />
                   Will it be a phone call?
                 </Accordion.Header>
-                <Accordion.Body>No. Zoom or team meet.</Accordion.Body>
+                <Accordion.Body className='border-top'>No. Zoom or team meet.</Accordion.Body>
               </Accordion.Item>
 
               <Accordion.Item eventKey="4" className='border'>
-                <Accordion.Header className='border-bottom'>
+                <Accordion.Header>
                   <FaPencilAlt className="me-3" color='#6ed8f0' />
                   Do I need to be prepared with anything?
                 </Accordion.Header>
-                <Accordion.Body>Yes. Your Questions &amp; Concerns.</Accordion.Body>
+                <Accordion.Body className='border-top'>Yes. Your Questions &amp; Concerns.</Accordion.Body>
               </Accordion.Item>
 
               <Accordion.Item eventKey="5" className='border'>
-                <Accordion.Header className='border-bottom'>
+                <Accordion.Header>
                   <FaUsers className="me-3" color='#6ed8f0' />
                   Is there a Social Media Group for This Program?
                 </Accordion.Header>
-                <Accordion.Body>No. If you permit, we shall add you to our WhatsApp group.</Accordion.Body>
+                <Accordion.Body className='border-top'>No. If you permit, we shall add you to our WhatsApp group.</Accordion.Body>
               </Accordion.Item>
 
               <Accordion.Item eventKey="6" className='border'>
-                <Accordion.Header className='border-bottom'>
+                <Accordion.Header>
                   <FaMoneyBillAlt className="me-3" color='#6ed8f0' />
                   What is the Refund Policy?
                 </Accordion.Header>
-                <Accordion.Body>No. The fees of 499 paid for this session is non-refundable.</Accordion.Body>
+                <Accordion.Body className='border-top'>No. The fees of 499 paid for this session is non-refundable.</Accordion.Body>
               </Accordion.Item>
               </Stack>
             </Accordion>
