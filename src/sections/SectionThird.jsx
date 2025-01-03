@@ -19,7 +19,7 @@ const SectionThird = () => {
         <Typography variant={'h2'} className={'fw-bold fs-1 text-center'}>
           This free one on one call is for you if:
         </Typography>
-        <Container>
+        {/* <Container>
           <hr className='mb-4' />
           <Row className='g-5'>
             <Col sm={6} md={3}>
@@ -108,7 +108,7 @@ const SectionThird = () => {
           </Row>
           <hr className='mt-4' />
 
-        </Container>
+        </Container> */}
 
         {/* <Container>
           <Stack direction='vertical' gap={3}>
@@ -169,9 +169,68 @@ const SectionThird = () => {
 
           </Stack>
           
-        </Container> */}
-      </div>
+        </Container>  */}
 
+        <Container>
+          <Row>
+            <hr className='mb-4' />
+            <Col md={6} sm={12}>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} />You believe your kid has cricketing potential.
+                </Typography>
+              </div>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} />You want your kid to give his/her 100% to this dream.
+                </Typography>
+              </div>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} /> You want your kid to believe in process
+                </Typography>
+              </div>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} />You want your kid to have bigger self relief.
+                </Typography>
+              </div>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} />You want your kid to have stronger self image.
+                </Typography>
+              </div>
+            </Col>
+
+            <Col md={6} sm={12}>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} /> You really want to support him/her in his/her pursuit of this crazy life dream.
+                </Typography>
+              </div>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} />You want your kid to perform to his potential &amp; beyond.
+                </Typography>
+              </div>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} /> You do not want to see your kid wilt under pressure in crunch situations.
+                </Typography>
+              </div>
+              <div className='p-3 '>
+                <Typography className='mb-0'>
+                  <TiTickOutline color='#6ED8F0' fontSize={'2rem'} /> You want your aspiring cricketer to build strong foundation to his cricketing career.
+                </Typography>
+              </div>
+            </Col>
+            <hr />
+          </Row>
+          <Stack direction='horizontal' >
+            <SharedButton variant={'primary'} size={'lg'} className={'btn-primary fw-bold p-3 rounded-pill mx-auto'} label={'Book Your One-On-One Call'} />
+          </Stack>
+        </Container>
+      </div>
     </>
   )
 }
