@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Typography from '../components/Typography'
-import { Row, Col, Stack, Container } from 'react-bootstrap'
+import { Row, Col, Stack, Container, Image } from 'react-bootstrap'
 import { GiBrain, GiBrokenHeart, GiCricketBat } from 'react-icons/gi'
 import { FaHandsHelping } from 'react-icons/fa'
 import { AiOutlineMessage } from 'react-icons/ai'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 const SectionSecond = () => {
+
+    useEffect(()=>{ 
+        AOS.init({duration:2000})
+   });
     return (
         <>
             <div className='bg-gradient--pale-ocean py-5'>
-                <Container>
+                {/* <Container>
                     <Row>
                         <Col sm={12} md={6}>
                             <Typography variant={'h2'} className={'fw-bold fs-1'}>
@@ -45,8 +52,49 @@ const SectionSecond = () => {
                             </Stack>
                         </Col>
                         <Col sm={12} md={6}>
+                        <Stack direction='vertical' className='justify-content-center h-100 '>
+                        <Image src='https://img.freepik.com/free-photo/tennis-ball-tennis-court_155003-8211.jpg?t=st=1735888819~exp=1735892419~hmac=4213c35f571fdde12bc6d8cbd66975f893f826e0957a1d16c9e4efb971519382&w=740'/>
+                        </Stack>
                         </Col>
                     </Row>
+                </Container> */}
+ <Typography variant={'h2'} className={'fw-bold fs-1 text-center mb-3'}>
+                                In this one on one call you will be able to understand
+                            </Typography>
+                <Container data-aos="fade-left">
+                           <Row className='g-4'>
+                           <Col lg={3} md={6} sm={12}>
+                            <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
+                                 <GiBrokenHeart size={'2rem'} color='#6ED8F0'/> 
+                                <Typography variant={'p'} className='lh-base mb-0'>Why Aspiring Cricketers Struggle to Reach Their Potential</Typography>
+                                </Stack>
+                            </Col>
+                            <Col lg={2} md={6} sm={12}>
+                            <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border text-center p-4 rounded h-100'}>
+                                <GiCricketBat size={'2rem'} color='#6ED8F0'/>
+                                <Typography variant={'p'} className='lh-base mb-0'>Factors That Drive a Young Cricketer’s Performance</Typography>
+                                </Stack>
+                            </Col>
+                            <Col lg={2} md={4} sm={12}>
+                            <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
+                                 <GiBrain size={'2rem'} color='#6ED8F0'/> 
+                                <Typography variant={'p'} className='lh-base mb-0'> Mental Toughness: The Key to Thriving in Cricket</Typography>
+                                </Stack>
+                            </Col>
+                           
+                            <Col lg={2} md={4} sm={12}>
+                            <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
+                                 <FaHandsHelping size={'2rem'} color='#6ED8F0'/> 
+                                <Typography variant={'p'} className='lh-base mb-0'>Your Role as a Parent in Their Cricketing Journey</Typography>
+                                </Stack>
+                            </Col>
+                            <Col lg={3} md={4} sm={12}>
+                            <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
+                                 <AiOutlineMessage size={'2rem'} color='#6ED8F0'/> 
+                                <Typography variant={'p'} className='lh-base mb-0'> The Do’s and Don’ts of Parent-Child Communication</Typography>
+                                </Stack>
+                            </Col>
+                           </Row>
                 </Container>
             </div>
         </>

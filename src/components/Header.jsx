@@ -7,9 +7,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 export const Header = () => {
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary" >
+      <Navbar expand="lg" className="bg-transparent" >
         <Container>
-        <img src='https://amberarondekar.com/wp-content/uploads/2023/10/logo-75x75-1.png'/>
+        <img src='logo.png'/>
           <Navbar.Brand href="#home">XYZ</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 

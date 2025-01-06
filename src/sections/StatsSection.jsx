@@ -5,7 +5,7 @@ import Typography from '../components/Typography'
 const StatsSection = () => {
   return (
     <>
-    <div className='stat-box container p-3'>
+    <div className='container'>
     <Row>
     <Col md={4} sm={12}>
      <Stack direction={'vertical'} gap={0} className='justify-content-center pt-5 border-end align-items-center'>
