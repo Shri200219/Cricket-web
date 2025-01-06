@@ -9,6 +9,7 @@ import SectionFourth from './sections/SectionFourth'
 import AbourMe from './sections/AbourMe'
 import SectionFive from './sections/SectionFive'
 import Footer from './sections/Footer'
+import Gallery from './sections/Gallery'
 
 const LandingPage = () => {
   return (
@@ -23,6 +24,7 @@ const LandingPage = () => {
     <AbourMe/>
     <SectionFourth/>
     <SectionFive/>
+
     <Footer/>
     </Stack>
     </>

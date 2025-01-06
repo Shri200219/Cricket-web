@@ -86,7 +86,7 @@ const SectionFive = () => {
         </Typography>
         <Row className="justify-content-center align-items-center">
           <Col md={8} sm={12} >
-            <Accordion defaultActiveKey="0" className='bg-gradient--pale-ocean'>
+            <Accordion  className='bg-gradient--pale-ocean'>
             <Stack direction='vertical' gap={3} className='bg-gradient--pale-ocean'>
               <Accordion.Item eventKey="0" className='border'>
                 <Accordion.Header >

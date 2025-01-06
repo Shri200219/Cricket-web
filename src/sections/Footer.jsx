@@ -1,5 +1,6 @@
 import React from 'react'
 import Typography from '../components/Typography'
+import { Row } from 'react-bootstrap'
 
 const Footer = () => {
   return (
