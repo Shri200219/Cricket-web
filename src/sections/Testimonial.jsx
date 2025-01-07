@@ -40,7 +40,7 @@ const Testimonial = () => {
                             breakpoints={{
                                 480: { slidesPerView: 1, spaceBetween: 30 },
                                 768: { slidesPerView: 1, spaceBetween: 200 }, // Show 2 slides for medium screens
-                                1024: { slidesPerView: 2, spaceBetween: 100 }, // Show 3 slides for larger screens
+                                1024: { slidesPerView: 3, spaceBetween: 250 }, // Show 3 slides for larger screens
                             }}
                             coverflowEffect={{
                                 rotate: 30,

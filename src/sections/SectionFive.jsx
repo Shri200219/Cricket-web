@@ -84,9 +84,9 @@ const SectionFive = () => {
         <Typography variant={'h2'} className={'text-center fs-1 fw-bold py-3'}>
           Frequently Asked Questions
         </Typography>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center py-3">
           <Col md={8} sm={12} >
-            <Accordion defaultActiveKey="0" className='bg-gradient--pale-ocean'>
+            <Accordion className='bg-gradient--pale-ocean'>
 
               <Stack direction='vertical' gap={3} >
 
