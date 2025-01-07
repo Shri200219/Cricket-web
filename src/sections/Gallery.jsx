@@ -1,32 +1,85 @@
 import React from 'react'
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container, Stack } from 'react-bootstrap';
+import Typography from '../components/Typography';
 const Gallery = () => {
+
+    const handleImageClick = (imageUrl) => {
+      // Open the image in a new tab
+      window.open(imageUrl, '_blank');
+    };
   return (
+    
     <>
+      <Container className='py-3'>
+        <Typography variant={'h2'} className={'text-center fs-1 fw-bold'} >
+          Gallery of Memories
+        </Typography>
 
-    <Container>
-    <Row className="justify-content-center">
-      <Col md={4} xs={6} className="mb-4">
-        <img src='/src/assets/images/1.jpg' alt='image-1' className='img-fluid w-100' />
-      </Col>
-      <Col md={4} xs={6} className="mb-4">
-      <img src='/src/assets/images/7.jpg' alt='image-7' className='img-fluid w-100' />
+        
+        <Row>
+          <Stack direction='horizontal' className='justify-content-center mt-3'>
+            <Col md={10} sm={12} lg={10}>
+              <div className='image-container'>
+                <div className='colunm'>
+                  <div className='photo'>
+                    <img src='/src/assets/images/img-14.jpg' alt='image-6' className='img-fluid w-100' onClick={() => handleImageClick('/src/assets/images/img-14.jpg')}/>
+                  </div>
+                  <div className='photo'>
+                    <img src='/src/assets/images/img-2.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-2.jpg')}/>
+                  </div>
+                  <div className='photo'>
+                    <img src='/src/assets/images/img-4.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-4.jpg')}/>
+                  </div>
+                  {/* <div className='photo'>
+                  <img src='/src/assets/images/img-3.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-3.jpg')} />
+                </div> */}
+                  {/* <div className='photo'>
+                  <img src='/src/assets/images/img-1.jpg' alt='image-6' className='shadow img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-1.jpg')} />
+                </div> */}
+                </div>
 
-      </Col>
-      <Col md={4} xs={6} className="mb-4">
-      <img src='/src/assets/images/6.jpg' alt='image-6' className='img-fluid w-100' />
-      </Col>
-      <Col md={4} xs={6} className="mb-4">
-      <img src='/src/assets/images/4.jpg' alt='image-4' className='img-fluid w-100' />
-      </Col>
-      <Col md={4} xs={6} className="mb-4">
-      <img src='/src/assets/images/5.jpg' alt='image-5' className='img-fluid w-100' />
-      </Col>
-      <Col md={4} xs={6} className="mb-4">
-      <img src='/src/assets/images/3.jpg' alt='image-3' className='img-fluid w-100' />
-      </Col>
-    </Row>
-  </Container>
+                <div className='colunm'>
+                  <div className='photo'>
+                    <img src='/src/assets/images/img-6.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-6.jpg')}/>
+                  </div>
+                  <div className='photo'>
+                    <img src='/src/assets/images/img-5.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-5.jpg')}/>
+                  </div>
+                  {/* <div className='photo'>
+        <img src='/src/assets/images/img-10.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-10.jpg')} />
+        </div> */}
+                </div>
+
+                <div className='colunm'>
+                  <div className='photo'>
+                    <img src='/src/assets/images/img-12.jpg' alt='image-6' className='img-fluid w-100' onClick={() => handleImageClick('/src/assets/images/img-12.jpg')}/>
+                  </div>
+                  <div className='photo'>
+                    <img src='/src/assets/images/img-7.jpg' alt='image-6' className='img-fluid w-100' onClick={() => handleImageClick('/src/assets/images/img-7.jpg')}/>
+                  </div> <div className='photo'>
+                    <img src='/src/assets/images/img-11.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-11.jpg')} />
+                  </div>
+                </div>
+
+
+                <div className='colunm'>
+                  <div className='photo'>
+                    <img src='/src/assets/images/img-8.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-8.jpg')}/>
+                  </div>
+                  {/* <div className='photo'>
+                  <img src='/src/assets/images/img-2.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-2.jpg')} />
+                </div>
+               */}
+                  {/*<div className='photo'>
+        <img src='/src/assets/images/img-7.jpg' alt='image-6' className='img-fluid w-100'  onClick={() => handleImageClick('/src/assets/images/img-7.jpg')}/>
+        </div> */}
+                </div>
+              </div>
+            </Col>
+          </Stack>
+        </Row>
+
+      </Container>
     </>
   )
 }

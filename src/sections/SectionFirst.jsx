@@ -25,7 +25,7 @@ const SectionFirst = () => {
               <Typography variant="h1" className="fs-1 fw-bold text-center ">
                 This is for you if you are a parent to a young aspiring cricketer
               </Typography>
-              <Typography variant="p" className="fs-5 w-md-50 w-sm-100 text-center ">
+              <Typography  className="lh-base mb-0 w-md-50 w-sm-100 text-center ">
                 Empower your young cricketer to build a stronger self-image and unshakable self-belief with my proven 7-session program—designed to equip them for peak performance on the cricket field.
               </Typography>
               <SharedButton
