@@ -5,15 +5,15 @@ import Typography from '../components/Typography'
 const StatsSection = () => {
   return (
     <>
-    <div className='container'>
+    <div className='container py-5'>
     <Row>
     <Col md={4} sm={12}>
      <Stack direction={'vertical'} gap={0} className='justify-content-center pt-5 border-end align-items-center'>
     
     <Typography variant={'h3'} className={'mb-0 text-center fw-bold'}>
-    Worked for 3 State
+    Worked for <span className='fw-bolder text-dark-primary fs-1'>3 </span> State 
     </Typography>
-    <Typography variant={'p'} className={'text-center text-primary '} color={'primary'} >
+    <Typography variant={'p'} className={'text-center text-primary fs-4'} color={'primary'} >
     Ranji Trophy Teams
     </Typography>
 </Stack>
@@ -22,9 +22,9 @@ const StatsSection = () => {
     <Stack direction={'vertical'} gap={0} className='justify-content-center pt-5 border-end align-items-center'>
 
     <Typography variant={'h3'} className={'mb-0 text-center fw-bold'}>
-    Trained over 500
+    Trained over <span className='text-dark-primary fs-1'>500</span>
     </Typography>
-    <Typography variant={'p'} className={'text-center text-primary'} color={'primary'}>
+    <Typography variant={'p'} className={'text-center text-primary fs-4'} color={'primary'}>
     Cricketers
     </Typography>
     </Stack>
@@ -33,9 +33,9 @@ const StatsSection = () => {
     <Stack direction={'vertical'} gap={0} className='justify-content-center pt-5 align-items-center'>
 
     <Typography variant={'h3'} className={'mb-0 text-center fw-bold'}>
-    Worked with 20+
+    Worked with <span className='text-dark-primary fs-1'>20+</span>
     </Typography>
-    <Typography variant={'p'} className={'text-center text-primary'} color={'primary'}> 
+    <Typography variant={'p'} className={'text-center text-primary fs-4'} color={'primary'}> 
     IPL Cricketers
     </Typography>
     </Stack>
