@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
+import { Container } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Navigation } from 'swiper/modules';
 
 const Testimonial = () => {
     const videosRef = useRef([]);
@@ -25,17 +26,21 @@ const Testimonial = () => {
     };
 
     return (
-        <div className="bg-gradient--pale-ocean py-3">
+        <>
+
+        <div className="bg-gradient--pale-ocean">
             <div className="container">
-                <h2 className="text-center display-5 fw-bold ">What our Client Says</h2>
+                <h4 className="text-center display-5 fw-bold ">What our Client Says</h4>
                 <div className="row justify-content-center">
                     <div className="col-12">
                         <Swiper
+                        pagination={{
+                            dynamicBullets: true,
+                          }}
                             effect={'coverflow'}
                             grabCursor={true}
                             centeredSlides={true}
                             loop={true}
-                            // slidesPerView={3}   /// Default for smaller screens
                             spaceBetween={30}
                             breakpoints={{
                                 480: { slidesPerView: 1, spaceBetween: 30 },
@@ -43,15 +48,15 @@ const Testimonial = () => {
                                 1024: { slidesPerView: 3, spaceBetween: 250 }, // Show 3 slides for larger screens
                             }}
                             coverflowEffect={{
-                                rotate: 30,
+                                rotate: 35,
                                 stretch: 0,
                                 depth: 150,
                                 modifier: 1,
-                                slideShadows: true,
+                                slideShadows: false,
                             }}
-                            pagination={{ clickable: true }}
+
                             navigation={true}
-                            modules={[EffectCoverflow, Pagination, Navigation]}
+                            modules={[EffectCoverflow, Navigation]}
                             className="swiper "
                             onSlideChange={handleSlideChange}
                             onSwiper={(swiper) => {
@@ -61,25 +66,18 @@ const Testimonial = () => {
                             }}
                         >
                             {/* Video Slides */}
-                            {['https://drive.google.com/file/d/1HEyOZ_W5p9AUhqujRB8EIalT097VroCP/view?usp=drive_link', 'https://drive.google.com/file/d/10vqu4SPexUrdNxDzWl25a6YuaDim7JmR/view?usp=drive_link', 'https://drive.google.com/file/d/1AQH4peREdj3wSdv7uSFPtkDWbk7ORr61/view?usp=drive_link', 'https://drive.google.com/file/d/1wpa-dsP9Ow-CtPg4wCZmx9-mfEiWeX6h/view?usp=drive_link'].map((src, index) => (
+                            {['./SPMPC.mp4','./SPMPC.mp4','./SPMPC.mp4','./SPMPC.mp4'].map((src, index) => (
                                 <SwiperSlide key={index}>
                                     <div
-                                        className="d-flex justify-content-center align-items-center p-3"
-                                        style={{
-                                            transition: 'transform 0.5s ease-in-out',
-                                        }}
+                                        className="d-flex justify-content-center align-items-center transformation"
+                                        
                                     >
                                         <video
                                             ref={(el) => (videosRef.current[index] = el)}
                                             src={`./${src}`}
-                                            controls
+                                            loop
                                             autoPlay
-                                            muted
-                                            className="img-fluid rounded "
-                                            style={{
-                                                maxHeight: '300px',
-                                                maxWidth: '100%',
-                                            }}
+                                            className="rounded h-12 px-5"
                                         />
                                     </div>
                                 </SwiperSlide>
@@ -88,7 +86,9 @@ const Testimonial = () => {
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+
+        </>
     );
 };
 
