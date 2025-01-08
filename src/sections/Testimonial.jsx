@@ -10,6 +10,14 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 const Testimonial = () => {
     const videosRef = useRef([]);
 
+    const videoUrls =[
+        'videos/video-1.mp4',
+        'videos/video-2.mp4',
+        'videos/video-3.mp4',
+        'videos/video-4.mp4',
+        'videos/video-5.mp4',
+    ]
+
     const handleSlideChange = (swiper) => {
         videosRef.current.forEach((video) => {
             if (video) {
@@ -61,7 +69,7 @@ const Testimonial = () => {
                             }}
                         >
                             {/* Video Slides */}
-                            {['https://drive.google.com/file/d/1HEyOZ_W5p9AUhqujRB8EIalT097VroCP/view?usp=drive_link', 'https://drive.google.com/file/d/10vqu4SPexUrdNxDzWl25a6YuaDim7JmR/view?usp=drive_link', 'https://drive.google.com/file/d/1AQH4peREdj3wSdv7uSFPtkDWbk7ORr61/view?usp=drive_link', 'https://drive.google.com/file/d/1wpa-dsP9Ow-CtPg4wCZmx9-mfEiWeX6h/view?usp=drive_link'].map((src, index) => (
+                            {videoUrls.map((src, index) => (
                                 <SwiperSlide key={index}>
                                     <div
                                         className="d-flex justify-content-center align-items-center p-3"

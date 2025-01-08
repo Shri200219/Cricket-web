@@ -25,7 +25,8 @@ const LandingPage = () => {
     <AbourMe/>
     <SectionFourth/>
     <SectionFive/>
-
+    <Gallery/>
+    <Testimonial/>
     <Footer/>
     </Stack>
     </>
