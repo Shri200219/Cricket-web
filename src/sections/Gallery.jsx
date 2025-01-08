@@ -25,40 +25,40 @@ const Gallery = () => {
 
                     <div className='colunm'>
                       <div className='photo'>
-                        <img src='images/mediaImage-14.jpg' alt='mediaImage-14' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-14.jpg')} />
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-14.jpg' alt='mediaImage-14' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-14.jpg')} />
                       </div>
                       <div className='photo'>
-                        <img src='images/mediaImage-2.jpg' alt='mediaImage-2' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-2.jpg')} />
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-2.jpg' alt='mediaImage-2' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-2.jpg')} />
                       </div>
                       <div className='photo'>
-                        <img src='images/mediaImage-4.jpg' alt='mediaImage-4' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-4.jpg')} />
-                      </div>
-                    </div>
-
-                    <div className='colunm'>
-                      <div className='photo'>
-                        <img src='images/mediaImage-6.jpg' alt='mediaImage-6' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-6.jpg')} />
-                      </div>
-                      <div className='photo'>
-                        <img src='images/mediaImage-5.jpg' alt='mediaImage-5' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-5.jpg')} />
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-4.jpg' alt='mediaImage-4' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-4.jpg')} />
                       </div>
                     </div>
 
                     <div className='colunm'>
                       <div className='photo'>
-                        <img src='images/mediaImage-12.jpg' alt='mediaImage-12' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-12.jpg')} />
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-6.jpg' alt='mediaImage-6' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-6.jpg')} />
                       </div>
                       <div className='photo'>
-                        <img src='images/mediaImage-7.jpg' alt='mediaImage-7' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-7.jpg')} />
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-5.jpg' alt='mediaImage-5' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-5.jpg')} />
+                      </div>
+                    </div>
+
+                    <div className='colunm'>
+                      <div className='photo'>
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-12.jpg' alt='mediaImage-12' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-12.jpg')} />
+                      </div>
+                      <div className='photo'>
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-7.jpg' alt='mediaImage-7' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-7.jpg')} />
                       </div>
                        <div className='photo'>
-                        <img src='images/mediaImage-11.jpg' alt='mediaImage-11' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-11.jpg')} />
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-11.jpg' alt='mediaImage-11' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-11.jpg')} />
                       </div>
                     </div>
 
                     <div className='colunm'>
                       <div className='photo'>
-                        <img src='images/mediaImage-8.jpg' alt='mediaImage-8' className='img-fluid w-100' onClick={() => handleImageClick('images/mediaImage-8.jpg')} />
+                        <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-8.jpg' alt='mediaImage-8' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/mediaImage-8.jpg')} />
                       </div>
                     </div>
 
@@ -76,46 +76,46 @@ const Gallery = () => {
 
                 <div className='colunm'>
                   <div className='photo'>
-                    <img src='images/image-1.jpg' alt='image-1' className='img-fluid w-100' onClick={() => handleImageClick('images/image-1.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-1.jpg' alt='image-1' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-1.jpg')} />
                   </div>
                   <div className='photo'>
-                    <img src='images/image-18.jpeg' alt='image-18' className='img-fluid w-100' onClick={() => handleImageClick('images/image-18.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-18.jpeg' alt='image-18' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-18.jpg')} />
                   </div> 
                 </div>
 
                 <div className='colunm'>
                   <div className='photo'>
-                    <img src='images/image-6.jpg' alt='image-6' className='img-fluid w-100' onClick={() => handleImageClick('images/image-6.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-6.jpg' alt='image-6' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-6.jpg')} />
                   </div>
                   <div className='photo'>
-                    <img src='images/image-5.jpg' alt='image-5' className='img-fluid w-100' onClick={() => handleImageClick('images/image-5.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-5.jpg' alt='image-5' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-5.jpg')} />
                   </div>
                   <div className='photo'>
-                    <img src='images/image-7.jpg' alt='image-7' className='img-fluid w-100' onClick={() => handleImageClick('images/image-7.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-7.jpg' alt='image-7' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-7.jpg')} />
                   </div>
                 </div>
 
                 <div className='colunm'>
                   <div className='photo'>
-                    <img src='images/image-12.jpg' alt='image-12' className='img-fluid w-100' onClick={() => handleImageClick('images/image-12.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-12.jpg' alt='image-12' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-12.jpg')} />
                   </div>
                   <div className='photo'>
-                    <img src='images/image-15.jpg' alt='image-15' className='img-fluid w-100' onClick={() => handleImageClick('images/image-15.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-15.jpg' alt='image-15' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-15.jpg')} />
                   </div> 
                    <div className='photo'>
-                    <img src='images/image-17.jpeg' alt='image-17' className='img-fluid w-100' onClick={() => handleImageClick('images/image-17.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-17.jpeg' alt='image-17' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-17.jpg')} />
                   </div> 
                 </div>
 
                 <div className='colunm'>
                   <div className='photo'>
-                    <img src='images/image-8.jpg' alt='image-8' className='img-fluid w-100' onClick={() => handleImageClick('images/image-8.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-8.jpg' alt='image-8' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-8.jpg')} />
                   </div>
                   <div className='photo'>
-                    <img src='images/image-13.jpg' alt='image-13' className='img-fluid w-100' onClick={() => handleImageClick('images/image-13.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-13.jpg' alt='image-13' className='img-fluid w-100' onClick={() => handleImageClick('https://cricket-web.s3.us-east-1.amazonaws.com/images/image-13.jpg')} />
                   </div>
                    <div className='photo'>
-                    <img src='images/image-9.jpg' alt='image-9' className='img-fluid w-100' onClick={() => handleImageClick('images/image-9.jpg')} />
+                    <img src='https://cricket-web.s3.us-east-1.amazonaws.com/images/image-9.jpg' alt='image-9' className='img-fluid w-100' onClick={() => handleImageClick('images/image-9.jpg')} />
                   </div> 
                 </div>
               </div>
