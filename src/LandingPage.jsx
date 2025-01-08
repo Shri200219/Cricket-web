@@ -17,7 +17,6 @@ const LandingPage = () => {
     <>
 <Stack direction='vertical' gap={3}>
     <Header/>
-
     <SectionFirst/>
     <StatsSection/>
     <SectionSecond/>
