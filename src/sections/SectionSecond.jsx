@@ -6,6 +6,11 @@ import { FaHandsHelping } from 'react-icons/fa'
 import { AiOutlineMessage } from 'react-icons/ai'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { BrokenHeartIcon } from '../components/icons/BrokenHeartIcon'
+import { CricketIcon } from '../components/icons/CricketIcon'
+import { BrainIcon } from '../components/icons/BrainIcon'
+import { HandsIcon } from '../components/icons/HandsIcon'
+import { MessageIcon } from '../components/icons/MessageIcon'
 
 
 const SectionSecond = () => {
@@ -65,32 +70,32 @@ const SectionSecond = () => {
                            <Row className='g-4'>
                            <Col lg={3} md={6} sm={12}>
                             <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
-                                 <GiBrokenHeart size={'2rem'} color='#6ED8F0'/> 
+                                 <BrokenHeartIcon/>
                                 <Typography variant={'p'} className='lh-base mb-0'>Why Aspiring Cricketers Struggle to Reach Their Potential</Typography>
                                 </Stack>
                             </Col>
                             <Col lg={2} md={6} sm={12}>
                             <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border text-center p-4 rounded h-100'}>
-                                <GiCricketBat size={'2rem'} color='#6ED8F0'/>
+                                <CricketIcon/>
                                 <Typography variant={'p'} className='lh-base mb-0'>Factors That Drive a Young Cricketer’s Performance</Typography>
                                 </Stack>
                             </Col>
                             <Col lg={2} md={4} sm={12}>
                             <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
-                                 <GiBrain size={'2rem'} color='#6ED8F0'/> 
-                                <Typography variant={'p'} className='lh-base mb-0'> Mental Toughness: The Key to Thriving in Cricket</Typography>
+                                 <BrainIcon/>
+                                <Typography variant={'p'} className='lh-base mb-0'>Mental Toughness: Drives Cricket Success</Typography>
                                 </Stack>
                             </Col>
                            
                             <Col lg={2} md={4} sm={12}>
                             <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
-                                 <FaHandsHelping size={'2rem'} color='#6ED8F0'/> 
+                                 <HandsIcon/>
                                 <Typography variant={'p'} className='lh-base mb-0'>Your Role as a Parent in Their Cricketing Journey</Typography>
                                 </Stack>
                             </Col>
                             <Col lg={3} md={4} sm={12}>
                             <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
-                                 <AiOutlineMessage size={'2rem'} color='#6ED8F0'/> 
+                                 <MessageIcon/> 
                                 <Typography variant={'p'} className='lh-base mb-0'> The Do’s and Don’ts of Parent-Child Communication</Typography>
                                 </Stack>
                             </Col>
