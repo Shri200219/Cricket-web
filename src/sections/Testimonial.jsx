@@ -8,12 +8,13 @@ import { EffectCoverflow, Navigation } from 'swiper/modules';
 
 const Testimonial = () => {
     const videosRef = useRef([]);
-    const videoUrls = [
-        'videos/video-1.mp4',
-        'videos/video-2.mp4',
-        'videos/video-3.mp4',
-        'videos/video-4.mp4',
-        'videos/video-5.mp4',
+
+    const videoUrls =[
+        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-5.mp4',
+        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-2.mp4',
+        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-3.mp4',
+        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-4.mp4',
+        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-5.mp4',
     ]
     const handleSlideChange = (swiper) => {
         videosRef.current.forEach((video) => {
