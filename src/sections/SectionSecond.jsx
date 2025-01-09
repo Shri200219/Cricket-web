@@ -19,6 +19,7 @@ const SectionSecond = () => {
         AOS.init({
             duration:2000,     
             offset: 0, 
+            once:true,
         })
    });
     return (

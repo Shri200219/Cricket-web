@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
     <Typography variant={'p'} className={'text-center'}>
-    Copyright 2023 - amberarondekar.com
+    Copyright 2025 - amberarondekar.com
     </Typography>
     </>
   )

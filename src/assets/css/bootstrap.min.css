@@ -7300,6 +7300,10 @@ textarea.form-control-lg{
     padding-top:1.5rem!important;
     padding-bottom:1.5rem!important
 }
+.py-6{
+    padding-top:2rem!important;
+    padding-bottom:2rem!important
+}
 .py-5{
     padding-top:3rem!important;
     padding-bottom:3rem!important
@@ -11052,10 +11056,11 @@ textarea.form-control-lg{
 
 @media (max-width: 480px) { 
    .mobile-height{
-    height: 7rem !important;
+    height: 8rem !important;
     }
    
 }
+
 
 /*# sourceMappingURL=bootstrap.min.css.map */
   

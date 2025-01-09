@@ -31,7 +31,7 @@ const Testimonial = () => {
     };
     return (
         <>
-            <div className="bg-gradient--pale-ocean">
+            <div className="bg-gradient--pale-ocean py-6">
                 <div className="container">
                     <h4 className="text-center display-5 fw-bold ">What our Client Says</h4>
                     <div className="row justify-content-center">
@@ -62,11 +62,7 @@ const Testimonial = () => {
                                 modules={[EffectCoverflow, Navigation]}
                                 className="swiper "
                                 onSlideChange={handleSlideChange}
-                                onSwiper={(swiper) => {
-                                    const firstSlide = swiper.slides[swiper.activeIndex];
-                                    const video = firstSlide.querySelector('video');
-                                    if (video) video.play();
-                                }}
+                                
                             >
                                 {/* Video Slides */}
                                 {videoUrls.map((src, index) => (
@@ -77,7 +73,7 @@ const Testimonial = () => {
                                         >
                                             <video
                                                 ref={(el) => (videosRef.current[index] = el)}
-                                                src={`./${src}`}
+                                                src={src}
                                                 autoPlay
                                                 controls
                                                 muted
