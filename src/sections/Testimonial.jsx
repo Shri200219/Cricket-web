@@ -26,9 +26,11 @@ const Testimonial = () => {
         const activeSlide = swiper.slides[swiper.activeIndex];
         const video = activeSlide.querySelector('video');
         if (video) {
-            video.play();
+            video.load();
         }
-    };
+    }; 
+    
+    
     return (
         <>
             <div className="bg-gradient--pale-ocean py-6">
@@ -57,7 +59,6 @@ const Testimonial = () => {
                                     modifier: 1,
                                     slideShadows: false,
                                 }}
-
                                 navigation={true}
                                 modules={[EffectCoverflow, Navigation]}
                                 className="swiper "
