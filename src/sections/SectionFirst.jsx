@@ -2,9 +2,13 @@ import React from 'react';
 import { Stack,  Container } from 'react-bootstrap';
 import Typography from '../components/Typography';
 import { SharedButton } from '../components/SharedButton';
-
-
+import { useNavigate } from 'react-router-dom';
 const SectionFirst = () => {
+  const navigate = useNavigate();
+  const handleNavigateToContactUs = () => {
+    navigate('/contact-us');
+  };
+
   return (
     <div className="bg-gradient--pale-ocean ">
       <Container fluid className='pb-5 px-0'>
@@ -33,6 +37,7 @@ const SectionFirst = () => {
                 size="lg"
                 className="btn-primary fw-bold p-3 rounded-pill mx-auto"
                 label="Book Your One-On-One Call"
+                onClick={handleNavigateToContactUs}
               />
             </Stack>
       </Container>

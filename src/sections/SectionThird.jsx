@@ -19,8 +19,14 @@ import { GrowthIcon } from '../components/icons/GrowthIcon'
 import { CheckedIcon } from '../components/icons/CheckedIcon'
 import { MirrorIcon } from '../components/icons/MirrorIcon'
 import { RunningIcon } from '../components/icons/RunningIcon'
+import { useNavigate } from 'react-router'
+
 
 const SectionThird = () => {
+  const navigate = useNavigate();
+  const handleNavigateToContactUs = () => {
+    navigate('/contact-us');
+  };
   const [active, setActive] = useState(false);
   return (
     <>
@@ -311,7 +317,10 @@ const SectionThird = () => {
               </Stack>
               </Col>
             </Row>
+
           </Container>
+
+          
         </Carousel.Item>
 
         <Carousel.Item>
@@ -346,6 +355,21 @@ const SectionThird = () => {
         </Carousel.Item> 
 
       </Carousel>
+      <Row className='d-flex justify-content-center align-items-center'>
+      <Col md={4} sm={12}>
+      <Stack direction='vertical' className='align-items-center justify-content-center h-100 px-5'>
+      <SharedButton
+      variant="primary"
+      size="lg"
+      className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center"
+      label="Book Your One-On-One Call"
+      onClick={handleNavigateToContactUs}
+      />
+      </Stack>
+      </Col>
+      </Row>
+      
+
     </>
   )
 }

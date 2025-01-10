@@ -11,6 +11,7 @@ import SectionFive from './sections/SectionFive'
 import Footer from './sections/Footer'
 import Gallery from './sections/Gallery'
 import Testimonial from './sections/Testimonial'
+import ContactUs from './components/ContactUs'
 
 const LandingPage = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col, Stack, Container } from 'react-bootstrap'
 import Typography from '../components/Typography'
-
+import { SharedButton } from '../components/SharedButton'
 
 const AbourMe = () => {
     return (
@@ -11,8 +11,8 @@ const AbourMe = () => {
                     <Row >
                         <Col sm={12} md={6}>
                             <Typography variant={'h2'} className={'fw-bold fs-1 text-center'}>
-                                     Let Me Introduce
-                                   </Typography>
+                                Let Me Introduce
+                            </Typography>
                             <Typography className='lh-lg mb-0'>
                                 My name is Amber Arondekar, a seasoned trainer with over 29 years of
                                 extensive experience delivering impactful training across industries
@@ -23,20 +23,27 @@ const AbourMe = () => {
                                 the players I have mentored are now part of various IPL teams, with
                                 a few representing India at the highest level in ODIs, T20s, and
                                 Test cricket.
-                                </Typography>
-                                <hr className='w-25'/>
+
+                            </Typography>
+                            <hr className='w-25' />
+                            
+                            <SharedButton
+                                variant="primary"
+                                size="lg"
+                                className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center"
+                                label="Book Your One-On-One Call" />
                         </Col>
                         <Col
                             sm={12}
                             md={6}>
                             <Stack direction='vertical' className='justify-content-center h-100 '>
-                            <img
-                                src="./AboutMe-2.png"
-                                alt="Amber Arondekar"
-                                className='img-fluid'
-                                width={450}
-                        
-                            />
+                                <img
+                                    src="./AboutMe-2.png"
+                                    alt="Amber Arondekar"
+                                    className='img-fluid'
+                                    width={450}
+
+                                />
                             </Stack>
                         </Col>
                     </Row>

@@ -1,8 +1,14 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import Typography from '../components/Typography'
+import { SharedButton } from '../components/SharedButton'
+import { useNavigate } from 'react-router'
 
 const SectionFourth = () => {
+  const navigate = useNavigate();
+  const handleNavigateToContactUs = () => {
+    navigate('/contact-us');
+  };
   return (
     <>
     <Container className='py-3'>
@@ -20,6 +26,13 @@ const SectionFourth = () => {
     </Typography>
     <hr className='m-auto w-25'/>
     </Container>
+    <SharedButton
+    variant="primary"
+    size="lg"
+    className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center"
+    label="Book Your One-On-One Call"
+    onClick={handleNavigateToContactUs}
+    />
     </>
   )
 }
