@@ -26,7 +26,7 @@ const Testimonial = () => {
         const activeSlide = swiper.slides[swiper.activeIndex];
         const video = activeSlide.querySelector('video');
         if (video) {
-            video.play();
+            video.load();
         }
     };
     return (
