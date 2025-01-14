@@ -73,7 +73,7 @@ const SectionSecond = () => {
                                 <SharedButton
                                     variant="primary"
                                     size="lg"
-                                    className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center"
+                                    className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center mt-3"
                                     label="Book Your One-On-One Call"
                                     onClick={handleNavigateToContactUs}
                                     />

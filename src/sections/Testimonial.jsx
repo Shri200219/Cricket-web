@@ -33,7 +33,7 @@ const Testimonial = () => {
     
     return (
         <>
-            <div className="bg-gradient--pale-ocean py-6">
+            <div className=" py-6">
                 <div className="container">
                     <h4 className="text-center display-5 fw-bold ">What our Client Says</h4>
                     <div className="row justify-content-center">

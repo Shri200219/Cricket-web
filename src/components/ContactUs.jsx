@@ -2,39 +2,68 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Container, Row, Col } from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal';
+import swal from 'sweetalert';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
-    yourName: '',
-    kidsName: '',
-    age: '',
-    contactNo: '',
-    location: '',
+    YourName: '',
+    KidsName: '',
+    Age: '',
+    ContactNo: '',
+    Location: '',
+    TransactionID:''
   });
-  const [showModal, setShowModal] = useState(false); 
+
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('Form Submitted:', formData);
-    setShowModal(true);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+
+    const formToSubmit = new FormData();
+    Object.entries(formData).forEach(([key, value]) => formToSubmit.append(key, value));
+
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyM_SgAoVgB3-f-6s0aiQYPHdAxhLmKFiFRsMNM6NtaUVTq731RL030EwQda2bxyKCXQA/exec",
+      {
+        method: "POST",
+        mode:"cors",
+        body: formToSubmit,
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        Swal({
+          title: 'Success!',
+          text: 'Your form has been submitted successfully!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+      });
+      // Reset the form
+      setFormData({
+          YourName: '',
+          KidsName: '',
+          Age: '',
+          ContactNo: '',
+          Location: '',
+          TransactionID: ''
+      });
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+      });
   };
-
-
-  const handleModalClose = () => {
-    setShowModal(false); 
-  };
-
 
   return (
     <div className="bg-light vh-100 d-flex align-items-center">
       <Container className="py-5">
         <Row className="justify-content-center">
           <Col lg={6} md={8} sm={10}>
-            <div className="p-4 bg-white rounded shadow">
+            <div className="p-4 bg-white rounded">
               <h2 className="text-center text-primary mb-4">Contact Us</h2>
               <Form onSubmit={handleSubmit}>
                 {/* Your Name */}
@@ -43,8 +72,8 @@ const ContactUs = () => {
                   <Form.Control
                     type="text"
                     placeholder="Enter your name"
-                    name="yourName"
-                    value={formData.yourName}
+                    name="YourName"
+                    value={formData.YourName}
                     onChange={handleChange}
                     required
                   />
@@ -56,8 +85,8 @@ const ContactUs = () => {
                   <Form.Control
                     type="text"
                     placeholder="Enter kid's name"
-                    name="kidsName"
-                    value={formData.kidsName}
+                    name="KidsName"
+                    value={formData.KidsName}
                     onChange={handleChange}
                     required
                   />
@@ -69,22 +98,22 @@ const ContactUs = () => {
                   <Form.Control
                     type="number"
                     placeholder="Enter age"
-                    name="age"
-                    value={formData.age}
+                    name="Age"
+                    value={formData.Age}
                     onChange={handleChange}
                     required
                     min="1"
-                    />
-                    </Form.Group>
-                  
+                  />
+                </Form.Group>
+
                 {/* Contact No */}
                 <Form.Group className="mb-3" controlId="formContactNo">
                   <Form.Label className="fw-bold">Contact No</Form.Label>
                   <Form.Control
                     type="tel"
                     placeholder="Enter contact number"
-                    name="contactNo"
-                    value={formData.contactNo}
+                    name="ContactNo"
+                    value={formData.ContactNo}
                     onChange={handleChange}
                     required
                     pattern="[0-9]{10}"
@@ -98,55 +127,41 @@ const ContactUs = () => {
                   <Form.Control
                     type="text"
                     placeholder="Enter location"
-                    name="location"
-                    value={formData.location}
+                    name="Location"
+                    value={formData.Location}
                     onChange={handleChange}
                     required
                   />
                 </Form.Group>
 
-                {/* File Upload *
-                  <Form.Group controlId="formFile" className="mb-4">
-                  <Form.Label className="fw-bold">Screenshot of Payment</Form.Label>
-                  <Form.Control type="file" />
+                <div className='d-flex align-items-center justify-content-center'>
+                <img src='/payment.jpg' className='h-25 w-25 d-flex align-items-center justify-content-center'/>
+                </div>
+                {/* Transaction ID */}
+                <Form.Group className="mb-3" controlId="formLocation">
+                  <Form.Label className="fw-bold">Transaction ID</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter TransactionID"
+                    name="TransactionID"
+                    value={formData.TransactionID}
+                    onChange={handleChange}
+                    required
+                  />
                 </Form.Group>
-                  /}
-                
-
                 {/* Submit Button */}
                 <div className="d-grid">
                   <Button variant="primary" type="submit">
-                    Submit
+                  Book
                   </Button>
                 </div>
               </Form>
+
+
             </div>
           </Col>
         </Row>
       </Container>
-
-      <Modal show={showModal} onHide={handleModalClose} centered>
-
-      <Modal.Body>
-      <p className='text-center fw-bold'>Scan this for Payment </p>
-      <img src='./payment.jpg' className='img-fluid p-5' />
-        <Form.Group controlId="formFile" className="mb-4">
-        <Form.Label className="fw-bold">Screenshot of Payment</Form.Label>
-        <Form.Control type="file" />
-      </Form.Group>
-        </Modal.Body>
-        <Modal.Footer className='d-flex'>
-          <Button variant="primary" onClick={handleModalClose}>
-            Close
-          </Button>
-
-          <Button variant="primary" onClick={handleSubmit}>
-            Submit
-          </Button>
-
-        </Modal.Footer>
-      </Modal>
-
     </div>
   );
 };
