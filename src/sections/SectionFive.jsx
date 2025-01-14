@@ -15,8 +15,8 @@ const SectionFive = () => {
   };
   
   return (
-    <div className="bg-gradient--pale-ocean">
-      <Container>
+    <div className="bg-gradient--pale-ocean py-4">
+      <Container data-aos="fade-up">
         <Typography variant={'h2'} className={'text-center fs-1 fw-bold py-3'}>
           Frequently Asked Questions
         </Typography>
@@ -85,17 +85,15 @@ const SectionFive = () => {
             </Accordion>
           </Col>
         </Row>
-        <Row>
-        <Col className='d-flex justify-content-center align-items-center mb-3'>
-        <SharedButton
-    variant="primary"
-    size="lg"
-    className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center"
-    label="Book Your One-On-One Call"
-    onClick={handleNavigateToContactUs}
-    />
-    </Col>
-    </Row>
+        <Stack direction='horizontal' className='justify-content-center'>
+               <SharedButton
+                        variant="primary"
+                        size="lg"
+                        className="fw-bold rounded-pill mx-auto"
+                        label="Book Your One-On-One Call"
+                        onClick={handleNavigateToContactUs}
+                        />
+                        </Stack>
       </Container>
     </div>
   );

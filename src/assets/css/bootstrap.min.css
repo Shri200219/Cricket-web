@@ -6908,6 +6908,7 @@ textarea.form-control-lg{
 .w-100{
     width:100%!important
 }
+ 
 .w-auto{
     width:auto!important
 }
@@ -8093,6 +8094,9 @@ textarea.form-control-lg{
     z-index:3!important
 }
 @media (min-width:576px){
+    .w-sm-75{
+        width: 75% !important;
+    }
     .float-sm-start{
         float:left!important
     }
@@ -9217,7 +9221,7 @@ textarea.form-control-lg{
         text-align:center!important
     }
     .w-md-50{
-        width: 50%;
+        width: 50%!important;
     }
 }
 @media (min-width:992px){
@@ -10990,6 +10994,10 @@ textarea.form-control-lg{
 .swiper-button-next
 {
     color:#212529 !important;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size:1.5rem !important;
 }
 
 .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {

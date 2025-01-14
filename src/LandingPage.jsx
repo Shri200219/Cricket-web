@@ -16,20 +16,20 @@ import Strategy from './sections/Strategy'
 const LandingPage = () => {
   return (
     <>
-<Stack direction='vertical' gap={3}>
-    <Header/>
-    <SectionFirst/>
-    <StatsSection/>
-    <SectionSecond/>
-    <SectionThird/>
-    <AbourMe/>
-    <SectionFourth/>
-    <Strategy/>
-    <Gallery/>
-    <SectionFive/>
-    <Testimonial/>
-    <Footer/>
-    </Stack>
+      <Header />
+      <Stack direction='vertical' gap={3}>
+        <SectionFirst />
+        <StatsSection />
+        <SectionSecond />
+        <SectionThird />
+        <AbourMe />
+        <SectionFourth />
+        <Strategy />
+        <Gallery />
+        <SectionFive />
+        <Testimonial />
+        <Footer />
+      </Stack>
     </>
   )
 }

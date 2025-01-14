@@ -11,7 +11,7 @@ const SectionFourth = () => {
   };
   return (
     <>
-    <Container className='py-3'>
+    <Container className='py-3' data-aos="fade-up">
     <Typography variant={'h2'} className={'text-center fs-1 fw-bold'} >
     Still Wondering If One on One Free Call is For You?
     </Typography>
@@ -27,12 +27,12 @@ const SectionFourth = () => {
     <hr className='m-auto w-25'/>
     </Container>
     <SharedButton
-    variant="primary"
-    size="lg"
-    className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center"
-    label="Book Your One-On-One Call"
-    onClick={handleNavigateToContactUs}
-    />
+          variant="primary"
+          size="lg"
+          className="fw-bold rounded-pill mx-auto"
+          label="Book Your One-On-One Call"
+          onClick={handleNavigateToContactUs}
+          />
     </>
   )
 }

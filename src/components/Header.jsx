@@ -8,12 +8,9 @@ export const Header = () => {
   return (
     <>
       <Navbar expand="lg" className="bg-transparent" >
-        <Container>
-        <img src='logo.png'/>
-          <Navbar.Brand href="#home">XYZ</Navbar.Brand>
+        <Container fluid>
+          <Navbar.Brand href="#home"><img src='logo.png'/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-
           {/*<Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home">Home</Nav.Link>

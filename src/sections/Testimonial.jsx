@@ -5,6 +5,8 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Navigation } from 'swiper/modules';
+import { Col, Container, Row, Stack } from 'react-bootstrap';
+import Typography from '../components/Typography';
 
 const Testimonial = () => {
     const videosRef = useRef([]);
@@ -33,11 +35,10 @@ const Testimonial = () => {
     
     return (
         <>
-            <div className=" py-6">
-                <div className="container">
-                    <h4 className="text-center display-5 fw-bold ">What our Client Says</h4>
-                    <div className="row justify-content-center">
-                        <div className="col-12">
+            <div className="py-5">
+                <Container data-aos="fade-up">
+                    <Typography variant={'h2'} className={'fs-1 text-center fw-bold'} >What our Client Says</Typography>
+                    
                             <Swiper
                                 pagination={{
                                     dynamicBullets: true,
@@ -61,17 +62,13 @@ const Testimonial = () => {
                                 }}
                                 navigation={true}
                                 modules={[EffectCoverflow, Navigation]}
-                                className="swiper "
+                                className="swiper mt-5"
                                 onSlideChange={handleSlideChange}
-                                
                             >
                                 {/* Video Slides */}
                                 {videoUrls.map((src, index) => (
                                     <SwiperSlide key={index}>
-                                        <div
-                                            className="d-flex justify-content-center align-items-center transformation"
-
-                                        >
+                                            <Stack direction='horizontal' className=' justify-content-center align-items-center transformation'>
                                             <video
                                                 ref={(el) => (videosRef.current[index] = el)}
                                                 src={src}
@@ -80,13 +77,12 @@ const Testimonial = () => {
                                                 muted
                                                 className="rounded h-12 px-5 mobile-height"
                                             />
-                                        </div>
+                                        </Stack>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-                        </div>
-                    </div>
-                </div>
+                        
+                </Container>
             </div>
         </>
     );

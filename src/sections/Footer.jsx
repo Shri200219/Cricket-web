@@ -5,9 +5,11 @@ import { Row } from 'react-bootstrap'
 const Footer = () => {
   return (
     <>
-    <Typography variant={'p'} className={'text-center'}>
-    Copyright 2025 - amberarondekar.com
+    <div className='border-top'>
+    <Typography variant={'p'} className={'text-center mt-2'}>
+    Copyright <span className='fw-bold'>&copy;</span>  2025 - amberarondekar.com
     </Typography>
+    </div>
     </>
   )
 }

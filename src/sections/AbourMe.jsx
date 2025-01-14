@@ -2,13 +2,18 @@ import React from 'react'
 import { Row, Col, Stack, Container } from 'react-bootstrap'
 import Typography from '../components/Typography'
 import { SharedButton } from '../components/SharedButton'
+import { useNavigate } from 'react-router'
 
 const AbourMe = () => {
+    const navigate = useNavigate();
+    const handleNavigateToContactUs = () => {
+      navigate('/contact-us');
+    };
     return (
         <>
             <div className='bg-gradient--pale-ocean py-5'>
-                <Container>
-                    <Row >
+                <Container data-aos="fade-up">
+                    <Row className='g-4'>
                         <Col sm={12} md={6}>
                             <Typography variant={'h2'} className={'fw-bold fs-1 text-center'}>
                                 Let Me Introduce
@@ -27,11 +32,15 @@ const AbourMe = () => {
                             </Typography>
                             <hr className='w-25' />
                             
-                            <SharedButton
-                                variant="primary"
-                                size="lg"
-                                className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center"
-                                label="Book Your One-On-One Call" />
+                               <Stack direction='horizontal' className='justify-content-center mt-4'>
+                                  <SharedButton
+                                  variant="primary"
+                                  size="lg"
+                                  className="fw-bold rounded-pill"
+                                  label="Book Your One-On-One Call"
+                                  onClick={handleNavigateToContactUs}
+                                  />
+                                  </Stack>
                         </Col>
                         <Col
                             sm={12}

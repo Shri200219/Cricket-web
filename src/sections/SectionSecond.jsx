@@ -33,7 +33,8 @@ const SectionSecond = () => {
                 <Typography variant={'h2'} className={'fw-bold fs-1 text-center mb-3'}>
                     In this one on one call you will be able to understand
                 </Typography>
-                <Container data-aos="fade-left">
+
+                <Container  data-aos="flip-left">
                     <Row className='g-4'>
                         <Col lg={3} md={6} sm={12}>
                             <Stack direction='vertical' gap={3} className={'justify-content-center align-items-center border  text-center p-4 rounded h-100'}>
@@ -67,20 +68,20 @@ const SectionSecond = () => {
                             </Stack>
                         </Col>
                     </Row>
-                    <Row className='d-flex justify-content-center align-items-center px-4'>
-                <Col lg={3} md={4} sm={12} className="">
-
-                                <SharedButton
-                                    variant="primary"
-                                    size="lg"
-                                    className="btn-primary fw-bold p-3 rounded-pill mx-auto  justify-content-center align-items-center mt-3"
-                                    label="Book Your One-On-One Call"
-                                    onClick={handleNavigateToContactUs}
-                                    />
-                              
-                        </Col>
-                        </Row>
                 </Container>
+
+                
+                    
+    <Stack direction='horizontal' className='justify-content-center mt-4'>
+      <SharedButton
+      variant="primary"
+      size="lg"
+      className="fw-bold rounded-pill"
+      label="Book Your One-On-One Call"
+      onClick={handleNavigateToContactUs}
+      />
+      </Stack>
+                         
             </div>
         </>
     )

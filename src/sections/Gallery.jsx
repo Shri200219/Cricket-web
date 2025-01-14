@@ -11,7 +11,7 @@ const Gallery = () => {
   return (
 
     <>
-      <Container className='py-3 gallery'>
+      <Container className='py-3 gallery' data-aos="fade-up">
         <Typography variant={'h2'} className={'text-center fs-1 fw-bold'} >
           Gallery of Memories
         </Typography>
