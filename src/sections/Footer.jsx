@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
     <div className='border-top'>
-    <Typography variant={'p'} className={'text-center mt-2'}>
+    <Typography variant={'p'} className={'text-center text-dark mt-2'}>
     Copyright <span className='fw-bold'>&copy;</span>  2025 - amberarondekar.com
     </Typography>
     </div>

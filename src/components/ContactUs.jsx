@@ -71,7 +71,7 @@ const ContactUs = () => {
           <Stack direction='vertical' gap={3}>
             {/* Your Name */}
             <Form.Group controlId="formYourName">
-              <Form.Label className="fw-bold">Your Name</Form.Label>
+              <Form.Label className="fw-bold text-dark ">Your Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter your name"
@@ -84,7 +84,7 @@ const ContactUs = () => {
 
             {/* Kid's Name */}
             <Form.Group controlId="formKidsName">
-              <Form.Label className="fw-bold">Kid's Name</Form.Label>
+              <Form.Label className="fw-bold text-dark ">Kid's Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter kid's name"
@@ -97,7 +97,7 @@ const ContactUs = () => {
 
             {/* Age */}
             <Form.Group controlId="formAge">
-              <Form.Label className="fw-bold">Age</Form.Label>
+              <Form.Label className="fw-bold text-dark ">Age</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter age"
@@ -111,7 +111,7 @@ const ContactUs = () => {
 
             {/* Contact No */}
             <Form.Group controlId="formContactNo">
-              <Form.Label className="fw-bold">Contact No</Form.Label>
+              <Form.Label className="fw-bold text-dark ">Contact No</Form.Label>
               <Form.Control
                 type="tel"
                 placeholder="Enter contact number"
@@ -126,7 +126,7 @@ const ContactUs = () => {
 
             {/* Location */}
             <Form.Group controlId="formLocation">
-              <Form.Label className="fw-bold">Location</Form.Label>
+              <Form.Label className="fw-bold text-dark ">Location</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter location"
@@ -138,11 +138,11 @@ const ContactUs = () => {
             </Form.Group>
 
             <Stack direction='horizontal' className='align-items-center justify-content-center'>
-              <Image src='/payment.jpg' fluid className='w-sm-75 w-md-50' thumbnail />
+              <Image src='/Payment-QR.jpg' fluid className='w-sm-75 w-md-50' thumbnail />
             </Stack>
             {/* Transaction ID */}
             <Form.Group controlId="formLocation">
-              <Form.Label className="fw-bold">Transaction ID</Form.Label>
+              <Form.Label className="fw-bold text-dark ">Transaction ID</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter TransactionID"
@@ -155,10 +155,9 @@ const ContactUs = () => {
 
             {/* Submit Button */}
             <SharedButton
-              variant="primary"
               size="lg"
               type={'submit'}
-              className="fw-bold rounded"
+              className="fw-bold rounded glow-on-hover"
               label="Book "
             />
 

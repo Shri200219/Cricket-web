@@ -12,7 +12,7 @@ const Gallery = () => {
 
     <>
       <Container className='py-3 gallery' data-aos="fade-up">
-        <Typography variant={'h2'} className={'text-center fs-1 fw-bold'} >
+        <Typography variant={'h2'} className={'text-center text-dark fs-1 fw-bold'} >
           Gallery of Memories
         </Typography>
 

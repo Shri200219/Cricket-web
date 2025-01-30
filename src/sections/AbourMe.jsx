@@ -33,13 +33,12 @@ const AbourMe = () => {
                             <hr className='w-25' />
                             
                                <Stack direction='horizontal' className='justify-content-center mt-4'>
-                                  <SharedButton
-                                  variant="primary"
-                                  size="lg"
-                                  className="fw-bold rounded-pill"
-                                  label="Book Your One-On-One Call"
-                                  onClick={handleNavigateToContactUs}
-                                  />
+                                    <SharedButton
+                                       size="lg"
+                                       className="fw-bold rounded-pill glow-on-hover"
+                                       label="Book Your One-On-One Call for ₹ 499"
+                                       onClick={handleNavigateToContactUs}
+                                       />
                                   </Stack>
                         </Col>
                         <Col

@@ -10,10 +10,10 @@ const StatsSection = () => {
           <Col md={4} sm={12}>
             <Stack direction={'vertical'} gap={0} className='justify-content-center pt-5 border-end align-items-center'>
 
-              <Typography variant={'h3'} className={'mb-0 text-center fw-bold'}>
-                Worked for <span className='fw-bolder text-dark-primary fs-1'>3 </span> State
+              <Typography variant={'h3'} className={'mb-0 text-center fw-bold text-dark'}>
+                Worked for <span className='fw-bolder text-dark-red fs-1'>3 </span> State
               </Typography>
-              <Typography variant={'p'} className={'text-center text-primary fs-4'} color={'primary'} >
+              <Typography variant={'p'} className={'text-center text-danger fs-4'} color={'danger'} >
                 Ranji Trophy Teams
               </Typography>
             </Stack>
@@ -21,10 +21,10 @@ const StatsSection = () => {
           <Col md={4} sm={12}>
             <Stack direction={'vertical'} gap={0} className='justify-content-center pt-5 border-end align-items-center'>
 
-              <Typography variant={'h3'} className={'mb-0 text-center fw-bold'}>
-                Trained over <span className='text-dark-primary fs-1'>500</span>
+              <Typography variant={'h3'} className={'mb-0 text-center fw-bold text-dark'}>
+                Trained over <span className='text-dark-red fs-1'>500</span>
               </Typography>
-              <Typography variant={'p'} className={'text-center text-primary fs-4'} color={'primary'}>
+              <Typography variant={'p'} className={'text-center text-danger fs-4'} color={'danger'}>
                 Cricketers
               </Typography>
             </Stack>
@@ -32,10 +32,10 @@ const StatsSection = () => {
           <Col md={4} sm={12}>
             <Stack direction={'vertical'} gap={0} className='justify-content-center pt-5 align-items-center'>
 
-              <Typography variant={'h3'} className={'mb-0 text-center fw-bold'}>
-                Worked with <span className='text-dark-primary fs-1'>20+</span>
+              <Typography variant={'h3'} className={'mb-0 text-center fw-bold text-dark'}>
+                Worked with <span className='text-dark-red fs-1'>20+</span>
               </Typography>
-              <Typography variant={'p'} className={'text-center text-primary fs-4'} color={'primary'}>
+              <Typography variant={'p'} className={'text-center text-danger fs-4'} color={'danger'}>
                 IPL Cricketers
               </Typography>
             </Stack>

@@ -16,7 +16,6 @@ const Testimonial = () => {
         'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-2.mp4',
         'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-3.mp4',
         'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-4.mp4',
-        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-5.mp4',
     ]
     const handleSlideChange = (swiper) => {
         videosRef.current.forEach((video) => {
@@ -37,7 +36,7 @@ const Testimonial = () => {
         <>
             <div className="py-5">
                 <Container data-aos="fade-up">
-                    <Typography variant={'h2'} className={'fs-1 text-center fw-bold'} >What our Client Says</Typography>
+                    <Typography variant={'h2'} className={'fs-1 text-center text-dark fw-bold'} >Real Results, Real Stories</Typography>
                     
                             <Swiper
                                 pagination={{
@@ -73,15 +72,33 @@ const Testimonial = () => {
                                                 ref={(el) => (videosRef.current[index] = el)}
                                                 src={src}
                                                 autoPlay
-                                                controls
                                                 muted
                                                 className="rounded h-12 px-5 mobile-height"
+                                                onClick={(e) => {
+                                                    
+                                                    // Check if the browser supports webkitRequestFullscreen (Chrome, Safari, Opera)
+                                                    if (e.target.webkitRequestFullscreen) {
+                                                        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                                                            // Enter fullscreen mode
+                                                            e.target.webkitRequestFullscreen();
+                                                            e.target.muted = false;
+                                                        } else {
+                                                            // Exit fullscreen mode
+                                                            if (document.exitFullscreen) {
+                                                                document.exitFullscreen();
+                                                                e.target.muted = true;
+                                                            } else if (document.webkitExitFullscreen) {
+                                                                document.webkitExitFullscreen();
+                                                                e.target.muted = true;
+                                                            }
+                                                        }
+                                                    }
+                                                }}
                                             />
                                         </Stack>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-                        
                 </Container>
             </div>
         </>

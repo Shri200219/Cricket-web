@@ -17,28 +17,45 @@ const SectionFirst = () => {
          {/* Carousel Section */}
        <div className="video-container">
           <video
-            src="./dummy.mp4"
+            src="./IntroVideo.mp4"
             autoPlay
-            loop
             muted
             fluid='true'
-            className="w-100 h-100"
+            className="video-background"
+            onClick={(e) => {
+              // Check if the browser supports webkitRequestFullscreen (Chrome, Safari, Opera)
+              if (e.target.webkitRequestFullscreen) {
+                  if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                      // Enter fullscreen mode
+                      e.target.webkitRequestFullscreen();
+                      e.target.muted = false;
+                  } else {
+                      // Exit fullscreen mode
+                      if (document.exitFullscreen) {
+                          document.exitFullscreen();
+                          e.target.muted = true;
+                      } else if (document.webkitExitFullscreen) {
+                          document.webkitExitFullscreen();
+                          e.target.muted = true;
+                      }
+                  }
+              }
+            }}
           />
         </div>
       <Stack direction="vertical" gap={3} className="text-center justify-content-center align-items-center mt-2" data-aos="fade-up">
           {/* Text Content */}
-              <Typography variant="h1" className="fs-1 fw-bold text-center ">
+              <Typography variant="h1" className="fs-1 mb-0 fw-bold text-center ">
                 This is for you if you are a parent to a young aspiring cricketer
               </Typography>
-              <Typography  className="lh-base mb-0 w-md-50 w-sm-100 text-center ">
+              <Typography  className="lh-base mb-0 w-md-50 w-sm-100 fs-3 text-center ">
                 Empower your young cricketer to build a stronger self-image and unshakable self-belief with my proven 7-session program—designed to equip them for peak performance on the cricket field.
               </Typography>
                 
                    <SharedButton
-                   variant="primary"
                    size="lg"
-                   className="fw-bold rounded-pill mx-auto"
-                   label="Book Your One-On-One Call"
+                   className="fw-bold rounded-pill mx-auto glow-on-hover"
+                   label="Book Your One-On-One Call for ₹ 499"
                    onClick={handleNavigateToContactUs}
                    />
                    
