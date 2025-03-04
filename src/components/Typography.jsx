@@ -24,13 +24,6 @@ Typography.propTypes = {
   size: PropTypes.string,
   className: PropTypes.string,
 };
-
-// Default Props
-Typography.defaultProps = {
-  variant: 'p',
-  color: 'inherit',
-  size: null,
-  className: '',
-};
+ 
 
 export default Typography;

@@ -11,12 +11,12 @@ import Typography from '../components/Typography';
 const Testimonial = () => {
     const videosRef = useRef([]);
 
-    const videoUrls =[
-        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-5.mp4',
-        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-2.mp4',
-        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-3.mp4',
-        'https://cricket-web.s3.us-east-1.amazonaws.com/src_videos/video-4.mp4',
-    ]
+    const testimonialVideos =[
+        {src:'/videos/video-1.mp4', poster:'images/yashBkothari.png'},
+        {src:'/videos/video-2.mp4', poster:'images/mohitkale.png'},
+        {src:'/videos/video-3.mp4', poster:'images/siddharth.png'},
+        {src:'/videos/video-4.mp4', poster:'images/mihir.png'},
+];
     const handleSlideChange = (swiper) => {
         videosRef.current.forEach((video) => {
             if (video) {
@@ -44,8 +44,8 @@ const Testimonial = () => {
                                 }}
                                 effect={'coverflow'}
                                 grabCursor={true}
-                                centeredSlides={true}
                                 loop={true}
+                                centeredSlides={true}
                                 spaceBetween={30}
                                 breakpoints={{
                                     480: { slidesPerView: 1, spaceBetween: 30 },
@@ -65,13 +65,15 @@ const Testimonial = () => {
                                 onSlideChange={handleSlideChange}
                             >
                                 {/* Video Slides */}
-                                {videoUrls.map((src, index) => (
+                                {testimonialVideos.map((video, index) => (
                                     <SwiperSlide key={index}>
                                             <Stack direction='horizontal' className=' justify-content-center align-items-center transformation'>
                                             <video
                                                 ref={(el) => (videosRef.current[index] = el)}
-                                                src={src}
+                                                src={video.src}
+                                                poster={video.poster}
                                                 autoPlay
+                                                loop={true}
                                                 muted
                                                 className="rounded h-12 px-5 mobile-height"
                                                 onClick={(e) => {

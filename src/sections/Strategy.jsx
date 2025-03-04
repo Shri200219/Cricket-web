@@ -14,15 +14,18 @@ const Strategy = () => {
 
   return (
     <>
-      <div className="bg-gradient--pale-ocean">
+      <div className="bg-black">
         <Container className="my-5" data-aos="fade-up">
           {/* Title */}
           <Typography variant="h2" className="fs-1 fw-bold text-center">
-            One-On-One Call: <span className='text-dark-primary fs-1'>7-Session Strategy </span>for Cricketers' Mental Strength
+            One-On-One Call 
+          </Typography>
+          <Typography variant="h2" className="fs-1 fw-bold text-center">
+          <span className='text-dark-red fs-1'>13 Session Strategy </span>for Cricketers' Mental Strength
           </Typography>
 
           {/* Key Topics Section */}
-          <Typography variant="h2" className="fw-bold text-center mb-4">
+          <Typography variant="h3" className="text-center mb-4">
             Key Topics Covered:
           </Typography>
 
@@ -97,18 +100,16 @@ const Strategy = () => {
               <Stack direction='horizontal' gap={3} className='p-2'>
                 <CheckIcon /><p className='mb-0 fs-6'>The parent-coach relationship: An important factor for the child.</p>
               </Stack>
-              <Stack direction='horizontal' gap={3} className='p-2'>
-                <CheckIcon /><p className='mb-0 fs-6'>What should I do about it as a parent?</p>
-              </Stack>
+             
               <Stack direction='horizontal' className='align-items-center justify-content-center mt-5'>
-                <Image src='img-1.png' className='w-75 ' fluid rounded data-aos='flip-down' />
+                <Image src='sessionImage02.jpg' className='w-75 ' fluid rounded data-aos='flip-down' />
               </Stack>
 
             </Stack>
 
-            <Stack direction='vertical' gap={3} className='colunm-reverse' data-aos='zoom-in'>
+            <Stack direction='vertical' gap={3} className='colunm-reverse justify-content-center' data-aos='zoom-in' >
               <Stack direction='horizontal' className='align-items-center mb-5 justify-content-center'>
-                <Image src='img-2.png' className='w-75 ' fluid rounded data-aos='flip-down' />
+                <Image src='sessionImage01.jpg' className='w-75 ' fluid rounded data-aos='flip-down' />
               </Stack>
               <Stack direction='horizontal' gap={3} className='p-2'>
                 <CheckIcon /><p className='mb-0 fs-6'>  What is Psychological Build-up? The basic Psychological Build-up process?</p>
@@ -122,7 +123,9 @@ const Strategy = () => {
               <Stack direction='horizontal' gap={3} className='p-2'>
                 <CheckIcon /><p className='mb-0 fs-6'> Key nonverbals that are detrimental for confidence of a sporting child.</p>
               </Stack>
-
+              <Stack direction='horizontal' gap={3} className='p-2'>
+                <CheckIcon /><p className='mb-0 fs-6'>What should I do about it as a parent?</p>
+              </Stack>
               <Stack direction='horizontal' gap={3} className='p-2'>
                 <CheckIcon /><p className='mb-0 fs-6'> Helping the child accept, embrace &amp; correct non-performances.</p>
               </Stack>
@@ -134,10 +137,9 @@ const Strategy = () => {
 
           {/* Call-to-Action Button */}
           <Stack direction='horizontal' className='justify-content-center mt-4'>
-            <SharedButton               
-              size="lg"
-              className="fw-bold rounded-pill mx-auto glow-on-hover"
-              label="Book Your One-On-One Call for  ₹ 499"
+            <SharedButton     
+              className="fw-bold rounded-pill mx-auto glow-on-hover btn-md-lg"
+              label="Book Your One-On-One Call for free"
               onClick={handleNavigateToContactUs}
             />
           </Stack>

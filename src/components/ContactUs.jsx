@@ -32,7 +32,7 @@ const ContactUs = () => {
 
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbyM_SgAoVgB3-f-6s0aiQYPHdAxhLmKFiFRsMNM6NtaUVTq731RL030EwQda2bxyKCXQA/exec",
+      "https://script.google.com/macros/s/AKfycbwY9JbZK0oCn8Qkfz8w89Ex-pTQ3M0rJ85Y_xt8YohNIR2lGepJLt6PT8m8JQ69r1Tx/exec",
       {
         method: "POST",
         mode: "cors",
@@ -67,7 +67,7 @@ const ContactUs = () => {
     <Container>
       <Stack direction='horizontal' className='justify-content-center align-items-center mt-3'>
         <Form onSubmit={handleSubmit} className='shadow w-md-50 w-sm-75 px-5 py-3'>
-          <Typography variant={'h2'} className='text-center fw-bold text-primary'> Contact Us</Typography>
+          <Typography variant={'h2'} className='text-center fw-bold text-dark-red'> Contact Us</Typography>
           <Stack direction='vertical' gap={3}>
             {/* Your Name */}
             <Form.Group controlId="formYourName">
@@ -76,6 +76,7 @@ const ContactUs = () => {
                 type="text"
                 placeholder="Enter your name"
                 name="YourName"
+                className="text-dark"
                 value={formData.YourName}
                 onChange={handleChange}
                 required
@@ -91,6 +92,7 @@ const ContactUs = () => {
                 name="KidsName"
                 value={formData.KidsName}
                 onChange={handleChange}
+                className="text-dark "
                 required
               />
             </Form.Group>
@@ -105,6 +107,7 @@ const ContactUs = () => {
                 value={formData.Age}
                 onChange={handleChange}
                 required
+                className="text-dark "
                 min="1"
               />
             </Form.Group>
@@ -119,6 +122,7 @@ const ContactUs = () => {
                 value={formData.ContactNo}
                 onChange={handleChange}
                 required
+                className="text-dark "
                 pattern="[0-9]{10}"
                 title="Enter a valid 10-digit contact number"
               />
@@ -131,6 +135,7 @@ const ContactUs = () => {
                 type="text"
                 placeholder="Enter location"
                 name="Location"
+                className="text-dark "
                 value={formData.Location}
                 onChange={handleChange}
                 required
@@ -149,6 +154,7 @@ const ContactUs = () => {
                 name="TransactionID"
                 value={formData.TransactionID}
                 onChange={handleChange}
+                className="text-dark "
                 required
               />
             </Form.Group>
@@ -157,10 +163,9 @@ const ContactUs = () => {
             <SharedButton
               size="lg"
               type={'submit'}
-              className="fw-bold rounded glow-on-hover"
+              className="fw-bold rounded btn-primary"
               label="Book "
             />
-
           </Stack>
         </Form>
       </Stack>
