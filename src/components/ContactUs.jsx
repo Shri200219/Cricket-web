@@ -66,7 +66,7 @@ const ContactUs = () => {
 
     <Container>
       <Stack direction='horizontal' className='justify-content-center align-items-center mt-3'>
-        <Form onSubmit={handleSubmit} className='shadow w-md-50 w-sm-75 px-5 py-3'>
+        <Form onSubmit={handleSubmit} className='shadow px-5 w-50 w-sm-100 py-3'>
           <Typography variant={'h2'} className='text-center fw-bold text-dark-red'> Contact Us</Typography>
           <Stack direction='vertical' gap={3}>
             {/* Your Name */}
@@ -143,7 +143,7 @@ const ContactUs = () => {
             </Form.Group>
 
             <Stack direction='horizontal' className='align-items-center justify-content-center'>
-              <Image src='/Payment-QR.jpg' fluid className='w-sm-75 w-md-50' thumbnail />
+              <Image src='/Payment-QR.jpg' fluid width={200} height={200} thumbnail />
             </Stack>
             {/* Transaction ID */}
             <Form.Group controlId="formLocation">

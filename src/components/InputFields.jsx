@@ -8,7 +8,7 @@ export const InputFields =({
     value,
     className,
     required,
-    feedback,
+    error,
     name,
     onChange,
     min,
@@ -30,6 +30,7 @@ export const InputFields =({
                     title={title}
                     pattern={pattern}
                 />
+                <Form.Text className='ms-2 text-danger'>{error}</Form.Text>
         </Form.Group>
     )
 };

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Form, Modal } from 'react-bootstrap'
 import { SharedButton } from './SharedButton'
 import { InputFields } from './InputFields';
 import {   useNavigate } from 'react-router';
+import { Form, Modal } from 'react-bootstrap';
 
 export const ContactModal = ({ show ,onHide}) => {
     const navigate = useNavigate();
@@ -14,51 +14,121 @@ export const ContactModal = ({ show ,onHide}) => {
         Location: '',
         TransactionID: ''
     });
+    const [error, setError] = useState({
+        YourName: '',
+        KidsName: '',
+        Age: '',
+        ContactNo: '',
+        Location: '',
+        TransactionID: ''
+    });
 
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        setFormData((prevState) => ({ ...prevState, [name]: value }));
+        setFormData((prev) => ({ ...prev, [name]: value }));
+        setError((prev) => ({ ...prev, [name]: "" }));
     };
 
     const handleSubmit = (e) => {
+        console.log("asdfghjk")
         e.preventDefault();
-
-
+            const { YourName, KidsName, Age, ContactNo, Location,TransactionID} = formData;
+            const contactPattern = /[0-9]{11}$/;
+            let isValid = true;
+    
+            // Form validation
+            if (!YourName) { setError((prev) => ({ ...prev, YourName: "Name is required *" }));   isValid = false; } 
+            if (!KidsName){ setError((prev) => ({ ...prev, KidsName: "Kids name is required *" }));   isValid = false; } 
+            if (!Age) { setError((prev) => ({ ...prev, Age: "Age is required *" }));   isValid = false; } 
+            if (!ContactNo) { setError((prev) => ({ ...prev, ContactNo: "Contact Number is required *" }));   isValid = false; } 
+            else if(contactPattern.test(ContactNo)) { setError((prev) => ({ ...prev, ContactNo: "Invalid contact Number *" }));   isValid = false; } 
+            if (!Location) { setError((prev) => ({ ...prev, Location: "Location is required *" }));   isValid = false; } 
+    
+            if (isValid){
+    
         const formToSubmit = new FormData();
-        Object.entries(formData).forEach(([key, value]) => formToSubmit.append(key, value));
-
-
+        // Object.entries(formData).forEach(([key, value]) => formToSubmit.append(key, value));
+        formToSubmit.append("YourName", YourName);
+        formToSubmit.append("KidsName", KidsName);
+        formToSubmit.append("Age", Age);
+        formToSubmit.append("ContactNo", ContactNo);
+        formToSubmit.append("Location", Location);
+        formToSubmit.append("TransactionID", TransactionID);
+    
+        console.log(formToSubmit);
+    
         fetch(
-            "https://script.google.com/macros/s/AKfycbwY9JbZK0oCn8Qkfz8w89Ex-pTQ3M0rJ85Y_xt8YohNIR2lGepJLt6PT8m8JQ69r1Tx/exec",
-            {
-                method: "POST",
-                mode: "cors",
-                body: formToSubmit,
-            }
+          "https://script.google.com/macros/s/AKfycbwY9JbZK0oCn8Qkfz8w89Ex-pTQ3M0rJ85Y_xt8YohNIR2lGepJLt6PT8m8JQ69r1Tx/exec",
+          {
+            method: "POST",
+            mode: "cors",
+            body: formToSubmit,
+          }
         )
-            .then((res) => res.json())
-            .then((data) => {
-                swal({
-                    title: 'Success!',
-                    text: 'Your form has been submitted successfully!',
-                    icon: 'success',
-                    button: 'OK'
-                }).then(() => { navigate('/thank-you'); });
-                // Reset the form
-                setFormData({
-                    YourName: '',
-                    KidsName: '',
-                    Age: '',
-                    ContactNo: '',
-                    Location: '',
-                    TransactionID: ''
-                });
-            })
-            .catch((error) => {
-                console.error("Error submitting form:", error);
+          .then((res) => res.json())
+          .then((data) => {
+            swal({
+              title: 'Success!',
+              text: 'Your form has been submitted successfully!',
+              icon: 'success',
+              button : 'OK'
+            }).then(()=>{ navigate('/');} );
+            // Reset the form
+            setFormData({
+              YourName: '',
+              KidsName: '',
+              Age: '',
+              ContactNo: '',
+              Location: '',
+              TransactionID: ''
             });
-    };
+          })
+          .catch((error) => {
+            console.error("Error submitting form:", error);
+          });
+    
+           } 
+      };
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+
+
+    //     const formToSubmit = new FormData();
+    //     Object.entries(formData).forEach(([key, value]) => formToSubmit.append(key, value));
+
+
+    //     fetch(
+    //         "https://script.google.com/macros/s/AKfycbwY9JbZK0oCn8Qkfz8w89Ex-pTQ3M0rJ85Y_xt8YohNIR2lGepJLt6PT8m8JQ69r1Tx/exec",
+    //         {
+    //             method: "POST",
+    //             mode: "cors",
+    //             body: formToSubmit,
+    //         }
+    //     )
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             swal({
+    //                 title: 'Success!',
+    //                 text: 'Your form has been submitted successfully!',
+    //                 icon: 'success',
+    //                 button: 'OK'
+    //             }).then(() => { navigate('/thank-you'); });
+    //             // Reset the form
+    //             setFormData({
+    //                 YourName: '',
+    //                 KidsName: '',
+    //                 Age: '',
+    //                 ContactNo: '',
+    //                 Location: '',
+    //                 TransactionID: ''
+    //             });
+    //         })
+    //         .catch((error) => {
+    //             console.error("Error submitting form:", error);
+    //         });
+    // };
 
     return (
         <>
@@ -76,6 +146,7 @@ export const ContactModal = ({ show ,onHide}) => {
                             name={'YourName'}
                             className={'text-dark'}
                             value={formData.YourName}
+                            error={error.YourName}
                             onChange={handleChange}
                             required={true}
                         />
@@ -88,6 +159,7 @@ export const ContactModal = ({ show ,onHide}) => {
                             name={'KidsName'}
                             className={'text-dark'}
                             value={formData.KidsName}
+                            error={error.KidsName}
                             onChange={handleChange}
                             required={true}
                         />
@@ -100,6 +172,7 @@ export const ContactModal = ({ show ,onHide}) => {
                             name={'Age'}
                             className={'text-dark'}
                             value={formData.Age}
+                            error={error.Age}
                             onChange={handleChange}
                             required={true}
                             min={"1"}
@@ -113,6 +186,7 @@ export const ContactModal = ({ show ,onHide}) => {
                             name={'ContactNo'}
                             className={'text-dark'}
                             value={formData.ContactNo}
+                            error={error.ContactNo}
                             onChange={handleChange}
                             required={true}
                             min={"1"}
@@ -129,6 +203,7 @@ export const ContactModal = ({ show ,onHide}) => {
                             name={'Location'}
                             className={'text-dark'}
                             value={formData.Location}
+                            error={error.Location}
                             onChange={handleChange}
                             required={true}
                         />
